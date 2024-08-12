@@ -10,7 +10,7 @@ const cron =require('node-cron');
 app.use(express.json());
 app.use(cors({origin:true}));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-const PORT=process.env.PORT;
+const PORT=process.env.PORT|| 5000;
 
 // const User=require('./models/userSchema');
 app.use(require('./routes/auth'));
